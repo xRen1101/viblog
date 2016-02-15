@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('api/v1/users/{id?}', 'AuthenticationController@users');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
