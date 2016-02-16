@@ -1,0 +1,26 @@
+{
+  "name": "viblog",
+  "version": "1.0.0",
+  "authors": [
+    "xRen1101 <zairenas@gmail.com>"
+  ],
+  "main": "index.php",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0",
+    "bootstrap": "~3.3.6"
+  },
+  "install": {
+    "path": "assets/libs"
+  }
+}
