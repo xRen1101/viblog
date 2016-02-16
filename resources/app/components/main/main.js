@@ -5,7 +5,7 @@ angular.module('viblogApp.main', [
 
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {
-    templateUrl: 'app/components/main/main.html',
+    templateUrl: 'resources/app/components/main/main.html',
     controller: 'MainController'
   });
 }]).
@@ -13,7 +13,7 @@ config(['$routeProvider', function($routeProvider) {
 controller('MainController', function($http, $scope) {
   $http({
     method: 'GET',
-    url: 'http://localhost/viblog/public/api/v1/users'
+    url: 'http://localhost/viblog/api/v1/users'
   })
     .success(function(response) {
       $scope.users = response;
