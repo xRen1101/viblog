@@ -21,4 +21,15 @@ class PostsController extends Controller
 
     	return $data;
     }
+
+    public function create(Request $request)
+    {
+    	$post = new Post;
+
+        $post->title = $request->input('title');
+        $post->text = $request->input('text');
+        $post->save();
+
+        return response()->json(['id' => $post->id]);
+    }
 }

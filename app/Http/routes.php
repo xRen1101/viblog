@@ -16,7 +16,9 @@ Route::get('/', function () {
 });
 
 Route::get('api/v1/users/{id?}', 'AuthenticationController@users');
+
 Route::get('api/v1/posts/{id?}', 'PostsController@posts');
+Route::post('api/v1/posts/', 'PostsController@create');
 
 /*
 |--------------------------------------------------------------------------
