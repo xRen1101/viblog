@@ -13,9 +13,9 @@ config(['$routeProvider', function($routeProvider) {
 controller('MainController', function($http, $scope) {
   $http({
     method: 'GET',
-    url: 'http://localhost/viblog/api/v1/users'
+    url: 'http://localhost/viblog/api/v1/posts'
   })
     .success(function(response) {
-      $scope.users = response;
+      $scope.posts = response;
   });
 });
