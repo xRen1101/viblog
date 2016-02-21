@@ -11,29 +11,24 @@ config(['$routeProvider', function($routeProvider) {
   });
 }]).
 
-controller('MainController', function($http, $scope) {
+controller('MainController', [
+  '$http', '$scope', 'PostFactory', 
+  function($http, $scope, PostFactory) {
+
+  $scope.postsFactory = new PostFactory();
 
   $scope.load = function () {
-    $http({
-      method: 'GET',
-      url: 'http://localhost/viblog/api/v1/posts'
-    })
-      .success(function(response) {
-        $scope.posts = response;
+    $scope.postsFactory.getPosts().then(function (data) {
+      $scope.posts = data;
     });
   };
 
   $scope.load();
 
   $scope.save = function () {
-    $http({
-      method: 'POST',
-      data: $scope.post,
-      url: 'http://localhost/viblog/api/v1/posts'
-    })
-      .success(function(response) {
-        $scope.postId = response.id;
-        $scope.load();
+    $scope.postsFactory.savePost($scope.post).then(function (data) {
+      $scope.postId = data.id;
+      $scope.load();
     });
   };
-});
+}]);
