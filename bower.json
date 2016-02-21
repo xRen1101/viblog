@@ -21,7 +21,10 @@
     "bootstrap": "~3.3.6"
   },
   "install": {
-    "path": "resources/assets/libs",
+    "path": {
+      "js": "resources/assets/libs",
+      "css": "resources/assets/libs"
+      },
     "sources" : {
       "bootstrap" : [
         "bower_components/bootstrap/dist/js/bootstrap.js",
