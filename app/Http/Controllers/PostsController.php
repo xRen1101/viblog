@@ -32,4 +32,12 @@ class PostsController extends Controller
 
         return response()->json(['id' => $post->id]);
     }
+
+    public function delete($id)
+    {
+        $post = Post::find($id);
+        $post->delete();
+
+        return response()->json(['status' => 'OK']);
+    }
 }
