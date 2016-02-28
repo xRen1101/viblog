@@ -4,7 +4,7 @@ angular.module('viblogApp.main').factory('PostFactory', [
   var PostFactory = function() {
   	var url = 'http://localhost/viblog/api/v1/posts';
 
-    this.getPosts = function() {
+    this.getAll = function() {
       var deferred = $q.defer();
 	  var postsData = $http.get(url);
 
@@ -15,7 +15,7 @@ angular.module('viblogApp.main').factory('PostFactory', [
 	  return deferred.promise;
 	};
 
-	this.savePost = function(post) {
+	this.save = function(post) {
       var deferred = $q.defer();
 	  var postData = $http.post(url, post);
 
@@ -26,7 +26,7 @@ angular.module('viblogApp.main').factory('PostFactory', [
 	  return deferred.promise;
 	};
 
-	this.deletePost = function(postId) {
+	this.delete = function(postId) {
       var deferred = $q.defer();
 	  var postData = $http.delete(url + '/' + postId);
 

@@ -19,6 +19,7 @@
 
     <script src="resources/app/app.js"></script>
     <script src="resources/app/components/main/main.js"></script>
+    <script src="resources/app/components/main/mainController.js"></script>
     <script src="resources/app/components/main/reverseFilter.js"></script>
     <script src="resources/app/components/main/postFactory.js"></script>
 </body>
