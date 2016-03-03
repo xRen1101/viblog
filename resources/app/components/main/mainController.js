@@ -7,22 +7,24 @@
 
   mainController.$inject = [
     '$http', 
-    'PostFactory'];
+    'PostService',
+    'UserService'];
 
-  function mainController($http, PostFactory) {
+  function mainController($http, Post, User) {
 
     var vm = this;
-    vm.postsFactory = new PostFactory();
+    vm.postService = new Post();
+    vm.userService = User;
 
     vm.load = function () {
-      vm.postsFactory.getAll()
+      vm.postService.getAll()
         .then(function (data) {
           vm.posts = data;
         });
     };
 
     vm.save = function () {
-      vm.postsFactory.save(vm.post)
+      vm.postService.save(vm.post)
         .then(function (data) {
           vm.postId = data.id;
           vm.load();
@@ -30,7 +32,7 @@
     };
 
     vm.delete = function (postId) {
-      vm.postsFactory.delete(postId)
+      vm.postService.delete(postId)
         .then(function (data) {
           vm.load();
         });

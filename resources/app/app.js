@@ -2,6 +2,7 @@
 
 angular.module('viblogApp', [
 	'viblogApp.main',
+	'viblogApp.login',
 	'ngRoute']);
 
 angular.module('viblogApp').config(function($httpProvider, $routeProvider, $locationProvider) {

@@ -1,4 +1,4 @@
-angular.module('viblogApp.main').filter('reverse', function() {
+angular.module('viblogApp').filter('reverse', function() {
   return function(items) {
   	var result = null;
 

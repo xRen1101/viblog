@@ -3,21 +3,23 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-offset-8">
-        	<div class="form-group">
-			    <label for="newPostTitle">Title</label>
-        		<input type="text" id="newPostTitle" class="form-control" ng-model="main.post.title" placeholder="Title...">
-    		</div>
-    		<div class="form-group">
-			    <label for="newPostText">Text</label>
-        		<input type="text" id="newPostText" class="form-control" ng-model="main.post.text" placeholder="Text...">
-        	</div>
-        	<button type="submit" class="btn btn-lg btn-success margin-bottom" ng-click="main.save()">
-        		<i class="glyphicon glyphicon-floppy-disk"></i> Save
-		  	</button>
+            <div ng-if="main.userService.logged">
+            	<div class="form-group">
+    			    <label for="newPostTitle">Title</label>
+            		<input type="text" id="newPostTitle" class="form-control" ng-model="main.post.title" placeholder="Title...">
+        		</div>
+        		<div class="form-group">
+    			    <label for="newPostText">Text</label>
+            		<input type="text" id="newPostText" class="form-control" ng-model="main.post.text" placeholder="Text...">
+            	</div>
+            	<button type="submit" class="btn btn-lg btn-success margin-bottom" ng-click="main.save()">
+            		<i class="glyphicon glyphicon-floppy-disk"></i> Save
+    		  	</button>
+            </div>
             <div ng-repeat="post in main.posts | reverse">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <button class="btn btn-xs btn-default float-right" ng-click="main.delete(post.id)">
+                        <button class="btn btn-xs btn-default float-right" ng-click="main.delete(post.id)" ng-if="main.userService.logged">
                             <i class="glyphicon glyphicon-remove"></i>
                         </button>
                     	<div><strong>{{ post.title }}</strong></div>

@@ -20,7 +20,10 @@
     <script src="resources/app/app.js"></script>
     <script src="resources/app/components/main/main.js"></script>
     <script src="resources/app/components/main/mainController.js"></script>
-    <script src="resources/app/components/main/reverseFilter.js"></script>
-    <script src="resources/app/components/main/postFactory.js"></script>
+    <script src="resources/app/components/login/login.js"></script>
+    <script src="resources/app/components/login/loginController.js"></script>
+    <script src="resources/app/components/main/postService.js"></script>
+    <script src="resources/app/components/shared/reverseFilter.js"></script>
+    <script src="resources/app/components/shared/userService.js"></script>
 </body>
 </html>

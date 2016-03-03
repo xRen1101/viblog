@@ -21,4 +21,15 @@ class AuthenticationController extends Controller
 
     	return $data;
     }
+
+    public function login(Request $request)
+    {
+        $value = $request->input('password');
+
+        if ($value == "meskiukas") {
+            return response()->json(['status' => 'OK']);
+        }
+
+        return response()->json(['status' => 'FAIL']);
+    }
 }

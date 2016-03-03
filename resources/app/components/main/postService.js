@@ -1,7 +1,8 @@
-angular.module('viblogApp.main').factory('PostFactory', [
-	'$http', '$q',
-	function($http, $q) {
-  var PostFactory = function() {
+angular.module('viblogApp.main').factory('PostService', [
+	'$http', '$q', 'UserService',
+	function($http, $q, User) {
+
+  var PostService = function() {
   	var url = 'http://localhost/viblog/api/v1/posts';
 
     this.getAll = function() {
@@ -17,6 +18,7 @@ angular.module('viblogApp.main').factory('PostFactory', [
 
 	this.save = function(post) {
       var deferred = $q.defer();
+      angular.extend(post, User);
 	  var postData = $http.post(url, post);
 
 	  postData.then(function(response) {
@@ -38,5 +40,5 @@ angular.module('viblogApp.main').factory('PostFactory', [
 	};
   };
 
-  return (PostFactory);
+  return (PostService);
 }]);

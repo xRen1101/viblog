@@ -11,15 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', function () { return view('index'); });
+Route::get('login', function () { return view('index'); });
 
 Route::get('api/v1/users/{id?}', 'AuthenticationController@users');
+Route::post('api/v1/users', 'AuthenticationController@login');
 
 Route::get('api/v1/posts/{id?}', 'PostsController@posts');
-Route::post('api/v1/posts/', 'PostsController@create');
-Route::delete('api/v1/posts/{id}', 'PostsController@delete');
+Route::post('api/v1/posts', 'PostsController@create')->middleware('auth');
+Route::delete('api/v1/posts/{id}', 'PostsController@delete')->middleware('auth');
 
 /*
 |--------------------------------------------------------------------------
