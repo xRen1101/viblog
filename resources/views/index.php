@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <title>viBlog</title>
     <link rel="stylesheet" type="text/css" href="resources/assets/libs/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="resources/app/app.css" />
     <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
     <!-- <link rel="stylesheet" type="text/css" href="/app/app.css"> -->
     <base href="/viblog/">

@@ -2,8 +2,8 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-offset-8">
-            <div ng-if="main.userService.logged">
+        <div class="col-xs-offset-4 col-xs-4 timeline">
+            <div class="margin-bottom" ng-if="main.userService.logged">
             	<div class="form-group">
     			    <label for="newPostTitle">Title</label>
             		<input type="text" id="newPostTitle" class="form-control" ng-model="main.post.title" placeholder="Title...">
@@ -12,8 +12,8 @@
     			    <label for="newPostText">Text</label>
             		<input type="text" id="newPostText" class="form-control" ng-model="main.post.text" placeholder="Text...">
             	</div>
-            	<button type="submit" class="btn btn-lg btn-success margin-bottom" ng-click="main.save()">
-            		<i class="glyphicon glyphicon-floppy-disk"></i> Save
+            	<button type="submit" class="btn btn-lg btn-primary margin-bottom" ng-click="main.save()">
+            		<i class="glyphicon glyphicon-plus-sign"></i> Post
     		  	</button>
             </div>
             <div ng-repeat="post in main.posts | reverse">

@@ -18,8 +18,14 @@ angular.module('viblogApp.main').factory('PostService', [
 
 	this.save = function(post) {
       var deferred = $q.defer();
-      angular.extend(post, User);
-	  var postData = $http.post(url, post);
+      var config = {
+        headers: {
+            'auth-username': User.username,
+            'auth-password': User.password
+        }
+      };
+
+	  var postData = $http.post(url, post, config);
 
 	  postData.then(function(response) {
 	    deferred.resolve(response.data);
@@ -30,7 +36,15 @@ angular.module('viblogApp.main').factory('PostService', [
 
 	this.delete = function(postId) {
       var deferred = $q.defer();
-	  var postData = $http.delete(url + '/' + postId);
+
+      var config = {
+        headers: {
+          'auth-username': User.username,
+          'auth-password': User.password
+        }
+      };
+
+	  var postData = $http.delete(url + '/' + postId, config);
 
 	  postData.then(function(response) {
 	    deferred.resolve(response.data);

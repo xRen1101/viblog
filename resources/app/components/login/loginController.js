@@ -6,11 +6,10 @@
     .controller('LoginController', loginController);
 
   loginController.$inject = [
-    '$http',
     '$location', 
     'UserService'];
 
-  function loginController($http, $location, User) {
+  function loginController($location, User) {
 
     var vm = this;
 

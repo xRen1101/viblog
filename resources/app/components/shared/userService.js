@@ -1,7 +1,7 @@
 angular.module('viblogApp').factory('UserService', [
 	'$http', '$q', function($http, $q) {
 
-	var url = 'http://localhost/viblog/api/v1/users';
+  var url = 'http://localhost/viblog/api/v1/users';
 
   var userService = {};
 
@@ -12,7 +12,12 @@ angular.module('viblogApp').factory('UserService', [
 	userService.login = function(username, password) {
     var deferred = $q.defer();
 
-	  var postData = $http.post(url, {username, password});
+	  var data = {
+		username: username,
+	    password: password
+	  };
+
+	  var postData = $http.post(url, data);
 
 	  postData.then(function(response) {
 	    deferred.resolve(response.data);

@@ -6,11 +6,10 @@
     .controller('MainController', mainController);
 
   mainController.$inject = [
-    '$http', 
     'PostService',
     'UserService'];
 
-  function mainController($http, Post, User) {
+  function mainController(Post, User) {
 
     var vm = this;
     vm.postService = new Post();

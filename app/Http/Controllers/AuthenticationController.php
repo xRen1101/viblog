@@ -24,9 +24,12 @@ class AuthenticationController extends Controller
 
     public function login(Request $request)
     {
-        $value = $request->input('password');
+        $username = $request->input('username');
+        $password = $request->input('password');
 
-        if ($value == "meskiukas") {
+        $user = User::where('name', $username)->first();
+
+        if ($username == $user->name && $password == $user->password) {
             return response()->json(['status' => 'OK']);
         }
 

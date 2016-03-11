@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests;
+use App\User;
 
 class Authenticate
 {
@@ -18,12 +19,15 @@ class Authenticate
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        $value = $request->input('password');
+        $username = $request->header('auth-username');
+        $password = $request->header('auth-password');
 
-        if ($value != "meskiukas") {
-            return response()->json(['status' => 'FAIL']);
+        $user = User::where('name', $username)->first();
+
+        if ($username == $user->name && $password == $user->password) {
+            return $next($request);
         }
 
-        return $next($request);
+        return response()->json(['status' => 'FAIL']);
     }
 }
