@@ -1,5 +1,5 @@
 body {
-  /*background: url("../assets/images/bg.jpg") fixed;*/
+  background: url("../assets/images/bg.jpg") fixed;
   background-size: cover;
 }
 
@@ -7,10 +7,41 @@ body {
   float: right;
 }
 
-.margin-top {
+.margin-top-sm {
   margin-top: 20px;
 }
 
-.margin-bottom {
+.margin-bottom-sm {
   margin-bottom: 20px;
+}
+
+.margin-left-sm {
+  margin-left: 20px;
+}
+
+.margin-right-sm {
+  margin-right: 20px;
+}
+
+.margin-top-md {
+  margin-top: 30px;
+}
+
+.padding-left-sm {
+  padding-left: 20px;
+}
+
+/*bootstrap style overrides*/
+
+.form-control {
+  border-radius: 7px;
+}
+
+.btn {
+  border-radius: 7px;
+}
+
+.panel {
+  border-radius: 7px;
+  opacity: 0.9;
 }

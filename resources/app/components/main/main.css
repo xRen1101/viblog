@@ -1,3 +1,14 @@
 .timeline {
   margin-top: 20px;
 }
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 5px;
+  border-left: 5px dotted #ffffff;
+  z-index: -1000;
+}
