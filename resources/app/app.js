@@ -14,5 +14,3 @@ angular.module('viblogApp').config(function($httpProvider, $routeProvider, $loca
 
 	$locationProvider.html5Mode(true);
 });
-
-angular.module('viblogApp').constant('API_URL', 'http://localhost/viblog/api/v1/');

@@ -1,7 +1,7 @@
 angular.module('viblogApp').factory('UserService', [
-	'$http', '$q', function($http, $q) {
+	'$http', '$q', '$location', function($http, $q, $location) {
 
-  var url = 'http://localhost/viblog/api/v1/users';
+  var url = $location.absUrl() + 'api/v1/users';
 
   var userService = {};
 

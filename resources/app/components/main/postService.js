@@ -1,9 +1,9 @@
 angular.module('viblogApp.main').factory('PostService', [
-	'$http', '$q', 'UserService',
-	function($http, $q, User) {
+	'$http', '$q', '$location', 'UserService',
+	function($http, $q, $location, User) {
 
   var PostService = function() {
-  	var url = 'http://localhost/viblog/api/v1/posts';
+  	var url = $location.absUrl() + 'api/v1/posts';
 
     this.getAll = function() {
       var deferred = $q.defer();
