@@ -26,5 +26,6 @@
     <script src="resources/app/components/main/postService.js"></script>
     <script src="resources/app/components/shared/reverseFilter.js"></script>
     <script src="resources/app/components/shared/userService.js"></script>
+    <script src="resources/app/components/shared/pathProvider.js"></script>
 </body>
 </html>
