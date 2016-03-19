@@ -1,13 +1,13 @@
 angular.module('viblogApp').factory('UserService', [
 	'$http', '$q', 'path', function($http, $q, path) {
 
-  var url = path.baseUrl + 'api/v1/users';
+  var url = path.baseUrl + 'users';
 
   var userService = {};
 
-	userService.logged = false;
-	userService.username = '';
-	userService.password = '';
+	userService.logged = true;
+	userService.username = 'admin';
+	userService.password = 'meskiukas';
 
 	userService.login = function(username, password) {
     var deferred = $q.defer();

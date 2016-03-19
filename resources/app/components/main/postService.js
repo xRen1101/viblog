@@ -3,7 +3,7 @@ angular.module('viblogApp.main').factory('PostService', [
 	function($http, $q, path, User) {
 
   var PostService = function() {
-	  var url = path.baseUrl + 'api/v1/posts';
+	  var url = path.baseUrl + 'posts';
 
     this.getAll = function() {
       var deferred = $q.defer();
