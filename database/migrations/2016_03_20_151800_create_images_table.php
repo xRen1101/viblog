@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostsTable extends Migration
+class CreateImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,22 +12,21 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->string('text');
-            $table->timestamps();
+            $table->integer('post_id')->unsigned();
+            $table->string('link');
+            $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
         });
 
         $faker = Faker\Factory::create();
 
-        $limit = 10;
+        $limit = 6;
 
         for ($i = 0; $i < $limit; $i++) {
-            DB::table('posts')->insert([ //,
-                'title' => $faker->text(40),
-                'text' => $faker->text(200),
-                'created_at' => $faker->dateTime($max = 'now')
+            DB::table('images')->insert([ //,
+                'link' => $faker->imageUrl(640, 480, 'cats'),
+                'post_id' => 10
             ]);
         }
     }
@@ -39,6 +38,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('posts');
+        Schema::drop('images');
     }
 }

@@ -12,3 +12,17 @@
   border-left: 5px dotted #ffffff;
   z-index: -1000;
 }
+
+.post-image {
+  width: 46%;
+  margin: 1%;
+}
+
+.create-post-image {
+  width: 98%;
+  margin: 1%;
+}
+
+.title {
+  font-size: 16px;
+}

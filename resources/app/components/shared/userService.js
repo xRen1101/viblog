@@ -1,9 +1,9 @@
 angular.module('viblogApp').factory('UserService', [
 	'$http', '$q', 'path', function($http, $q, path) {
 
-  var url = path.baseUrl + 'users';
+  	var url = path.baseUrl + 'users';
 
-  var userService = {};
+  	var userService = {};
 
 	userService.logged = true;
 	userService.username = 'admin';
@@ -12,19 +12,19 @@ angular.module('viblogApp').factory('UserService', [
 	userService.login = function(username, password) {
     var deferred = $q.defer();
 
-	  var data = {
-		username: username,
-	    password: password
-	  };
+	  	var data = {
+			username: username,
+			password: password
+	  	};
 
-	  var postData = $http.post(url, data);
+	  	var postData = $http.post(url, data);
 
-	  postData.then(function(response) {
-	    deferred.resolve(response.data);
-	  });
+	  	postData.then(function(response) {
+		  	deferred.resolve(response.data);
+	  	});
 
-	  return deferred.promise;
+	  	return deferred.promise;
 	};
 
-  return userService;
+  	return userService;
 }]);
