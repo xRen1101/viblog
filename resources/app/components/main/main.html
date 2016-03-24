@@ -25,6 +25,7 @@
                                 <i class="glyphicon glyphicon-plus-sign"></i> <span class="hidden-xs hidden-sm">Add</span>
                             </button>
                         </div>
+                        <div class="col-xs-12 upload-hint">Upload image here - <a href="http://postimage.org/">http://postimage.org/</a></div>
                     </div>
                     <div class="row">
                         <div class="col-xs-4" ng-repeat="image in main.post.images">
@@ -35,7 +36,7 @@
                     </div>
                     <button
                             type="submit"
-                            class="btn btn-primary margin-bottom-sm col-xs-offset-4 col-xs-4 col-sm-offset-5 col-sm-2 col-md-offset-5 col-md-2"
+                            class="btn btn-primary margin-top-sm margin-bottom-sm col-xs-offset-4 col-xs-4 col-sm-offset-5 col-sm-2 col-md-offset-5 col-md-2"
                             ng-click="main.save()">
                         <i class="glyphicon glyphicon-plus-sign"></i> <span class="hidden-xs hidden-sm">Post</span>
                     </button>
@@ -52,7 +53,7 @@
                             <div class="title"><strong>{{ post.title }}</strong></div>
                             <div>{{ post.text }}</div>
                             <a href="{{ image.link }}" ng-repeat="image in post.images">
-                                <image class="post-image img-rounded" src="{{ image.link }}"></image>
+                                <image class="post-image img-rounded" ng-class="{'post-image-big': post.images.length % 2 == 1 && image == post.images[0]}" src="{{ image.link }}"></image>
                             </a>
                         </div>
                     </div>
