@@ -18,6 +18,7 @@
     vm.post = {
       id: null,
       text: '',
+      embed_url: '',
       images: []
     };
 

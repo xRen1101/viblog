@@ -18,17 +18,21 @@
   "dependencies": {
     "angular": "~1.5.0",
     "angular-route": "~1.5.0",
-    "bootstrap": "~3.3.6"
+    "bootstrap": "~3.3.6",
+    "ng-youtube-embed": "^0.2.3"
   },
   "install": {
     "path": {
       "js": "resources/assets/libs",
       "css": "resources/assets/libs"
-      },
-    "sources" : {
-      "bootstrap" : [
+    },
+    "sources": {
+      "bootstrap": [
         "bower_components/bootstrap/dist/js/bootstrap.js",
         "bower_components/bootstrap/dist/css/bootstrap.css"
+      ],
+      "ng-youtube-embed": [
+        "bower_components/ng-youtube-embed/build/ng-youtube-embed.min.js"
       ]
     }
   }

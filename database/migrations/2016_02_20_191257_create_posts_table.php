@@ -16,6 +16,7 @@ class CreatePostsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('text');
+            $table->string('embed_url');
             $table->timestamps();
         });
 
@@ -30,6 +31,12 @@ class CreatePostsTable extends Migration
                 'created_at' => $faker->dateTime($max = 'now')
             ]);
         }
+
+        DB::table('posts')->insert([ //,
+            'title' => $faker->text(40),
+            'embed_url' => 'https://www.youtube.com/watch?v=2h0geB9bRbE',
+            'created_at' => $faker->dateTime($max = 'now')
+        ]);
     }
 
     /**

@@ -44,3 +44,8 @@ body {
 .panel {
   border-radius: 7px;
 }
+
+iframe {
+  border-radius: 7px;
+  padding: 5px;
+}

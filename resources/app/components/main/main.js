@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('viblogApp.main', ['ngRoute']);
+angular.module('viblogApp.main', ['ngRoute', 'ngYoutubeEmbed']);
 
 angular.module('viblogApp.main').config(['$routeProvider', function($routeProvider) {
 

@@ -16,6 +16,8 @@
     <script src="resources/assets/libs/angular/angular.js"></script>
     <script src="resources/assets/libs/angular-route/angular-route.js"></script>
     <script src="resources/assets/libs/jquery/jquery.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="resources/assets/libs/ng-youtube-embed/ng-youtube-embed.min.js"></script>
     <script src="resources/assets/libs/bootstrap/bootstrap.js"></script>
 
     <script src="resources/app/app.js"></script>
