@@ -43,14 +43,8 @@
   width: 100%;
 }
 
-.viblog-text {
-  margin-top: 40vh;
-  margin-left: 40vw;
-  font-size: 100px;
-}
-
 .intro-anchor-scroll-row {
-  margin-top: 80vh;
+  margin-top: 40vh;
 }
 
 .intro-anchor-scroll-button {
@@ -65,4 +59,19 @@
   background-color: transparent;
   color: #5e5e5e;
   border-color: #5e5e5e;
+}
+
+.center {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.main-title-row {
+
+}
+
+.main-title {
+  margin-top: 20vh;
+  font-size: 100px;
+  text-align: center;
 }
