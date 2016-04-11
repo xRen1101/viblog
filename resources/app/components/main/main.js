@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('viblogApp.main', ['ngRoute', 'ngYoutubeEmbed']);
+angular.module('viblogApp.main', ['ngRoute', 'ngYoutubeEmbed', 'angularSmoothscroll']);
 
 angular.module('viblogApp.main').config(['$routeProvider', function($routeProvider) {
 
@@ -9,8 +9,4 @@ angular.module('viblogApp.main').config(['$routeProvider', function($routeProvid
     controller: 'MainController as main'
   });
   
-}]);
-
-angular.module('viblogApp.main').run(['$anchorScroll', function($anchorScroll) {
-  $anchorScroll.yOffset = 200;
 }]);
