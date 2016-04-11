@@ -1,8 +1,16 @@
 <link rel="stylesheet" type="text/css" href="resources/app/components/main/main.css">
 
-<div class="container-fluid intro-container"></div>
+<div class="container-fluid intro-container">
+    <div class="row intro-anchor-scroll-row">
+        <button class="btn btn-lg btn-default intro-anchor-scroll-button col-xs-offset-5 col-xs-2"
+                ng-click="main.scrollToNews()">
+            <i class="glyphicon glyphicon-chevron-down"></i>
+        </button>
+    </div>
+</div>
 
-<div class="container">
+<div class="container-fluid news-container">
+<div id="news" class="container">
     <div class="row">
         <div class="col-xs-offset-1 col-xs-10 timeline">
 
@@ -70,4 +78,5 @@
 
         </div>
     </div>
+</div>
 </div>

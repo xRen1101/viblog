@@ -10,7 +10,7 @@
   height: 100%;
   width: 5px;
   border-left: 5px dotted #ffffff;
-  z-index: -1000;
+  z-index: 0;
 }
 
 .post-image {
@@ -41,4 +41,28 @@
 
 .add-button {
   width: 100%;
+}
+
+.viblog-text {
+  margin-top: 40vh;
+  margin-left: 40vw;
+  font-size: 100px;
+}
+
+.intro-anchor-scroll-row {
+  margin-top: 80vh;
+}
+
+.intro-anchor-scroll-button {
+  background-color: transparent;
+  color: #000000;
+  border-color: #000000;
+}
+
+.intro-anchor-scroll-button:active,
+.intro-anchor-scroll-button:hover,
+.intro-anchor-scroll-button:focus {
+  background-color: transparent;
+  color: #5e5e5e;
+  border-color: #5e5e5e;
 }

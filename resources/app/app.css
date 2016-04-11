@@ -1,12 +1,16 @@
 body {
-  background: url("../assets/images/bg.jpg") fixed;
-  background-size: cover;
+
 }
 
 .intro-container {
   background: url("../assets/images/intro.jpg") fixed;
   background-size: cover;
   height: 100vh;
+}
+
+.news-container {
+  background: url("../assets/images/bg.jpg") fixed;
+  background-size: cover;
 }
 
 .float-right {

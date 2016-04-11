@@ -10,3 +10,7 @@ angular.module('viblogApp.main').config(['$routeProvider', function($routeProvid
   });
   
 }]);
+
+angular.module('viblogApp.main').run(['$anchorScroll', function($anchorScroll) {
+  $anchorScroll.yOffset = 200;
+}]);
