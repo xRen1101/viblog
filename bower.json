@@ -20,7 +20,7 @@
     "angular-route": "~1.5.0",
     "bootstrap": "~3.3.6",
     "ng-youtube-embed": "^0.2.3",
-    "angular-smoothscroll": "^1.1.1"
+    "angular-scroll": "^1.0.0"
   },
   "install": {
     "path": {

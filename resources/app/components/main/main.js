@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('viblogApp.main', ['ngRoute', 'ngYoutubeEmbed', 'angularSmoothscroll']);
+angular.module('viblogApp.main', ['ngRoute', 'ngYoutubeEmbed', 'duScroll']);
 
 angular.module('viblogApp.main').config(['$routeProvider', function($routeProvider) {
 

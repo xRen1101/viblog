@@ -6,12 +6,10 @@
     .controller('MainController', mainController);
 
   mainController.$inject = [
-    '$anchorScroll',
-    '$location',
     'PostService',
     'UserService'];
 
-  function mainController($anchorScroll, $location, Post, User) {
+  function mainController(Post, User) {
 
     var vm = this;
     vm.postService = Post;
@@ -54,11 +52,6 @@
           link: vm.link
         });
       }
-    };
-
-    vm.scrollToNews = function () {
-      $location.hash('news');
-      $anchorScroll();
     };
 
     vm.load();

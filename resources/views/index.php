@@ -19,7 +19,7 @@
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="resources/assets/libs/ng-youtube-embed/ng-youtube-embed.min.js"></script>
     <script src="resources/assets/libs/bootstrap/bootstrap.js"></script>
-    <script src="resources/assets/libs/angular-smoothscroll/bb15da28.scripts.js"></script>
+    <script src="resources/assets/libs/angular-scroll/angular-scroll.js"></script>
 
     <script src="resources/app/app.js"></script>
     <script src="resources/app/components/main/main.js"></script>
