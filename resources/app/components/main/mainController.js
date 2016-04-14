@@ -19,7 +19,8 @@
       id: null,
       text: '',
       embed_url: '',
-      images: []
+      images: [],
+      visible: false
     };
 
     vm.load = function () {
@@ -52,6 +53,10 @@
           link: vm.link
         });
       }
+    };
+
+    vm.setPostVisibility = function (post, inview) {
+      post.visible = inview;
     };
 
     vm.load();

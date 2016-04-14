@@ -64,7 +64,7 @@
                 </div>
             </div>
 
-            <div class="row" ng-repeat="post in main.posts | reverse">
+            <div class="row post-animation" ng-repeat="post in main.posts | reverse" in-view="main.setPostVisibility(post, $inview)" ng-class="{'animated fadeIn': post.visible}">
                 <div class="padding-left-sm margin-top-sm col-xs-12 col-xs-offset-0 col-md-6" ng-class="{'col-md-offset-6': post.id % 2 == 0}">
                     <div class="panel panel-default">
                         <div class="panel-body">
