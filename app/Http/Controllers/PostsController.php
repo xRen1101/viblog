@@ -14,7 +14,7 @@ class PostsController extends Controller
     public function posts($id = null)
     {
     	if ($id == null) {
-    		$data = Post::with('images')->get();
+    		$data = Post::orderBy('created_at', 'asc')->with('images')->get();
     	} 
     	else {
     		$data = Post::with('images')->find($id, array('id', 'title', 'text'));
