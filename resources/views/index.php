@@ -7,8 +7,6 @@
     <link rel="stylesheet" type="text/css" href="resources/assets/libs/bootstrap/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="resources/assets/libs/animate/animate.css" />
     <link rel="stylesheet" type="text/css" href="resources/app/app.css" />
-    <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="/app/app.css"> -->
     <base href="/viblog/">
 </head>
 <body>

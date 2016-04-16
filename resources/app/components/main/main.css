@@ -77,3 +77,8 @@
 .post-animation {
   -webkit-animation-duration: 3s;
 }
+
+.post-date {
+  font-size: 10px;
+  float: right;
+}
