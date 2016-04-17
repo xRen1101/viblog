@@ -21,6 +21,8 @@ Route::get('api/v1/posts/{id?}', 'PostsController@posts');
 Route::post('api/v1/posts', 'PostsController@create')->middleware('auth');
 Route::delete('api/v1/posts/{id}', 'PostsController@delete')->middleware('auth');
 
+Route::get('api/v1/types/{id?}', 'PostTypesController@types');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes

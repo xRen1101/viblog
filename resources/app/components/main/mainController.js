@@ -7,13 +7,15 @@
 
   mainController.$inject = [
     'PostService',
+    'PostTypeService',
     'UserService'];
 
-  function mainController(Post, User) {
+  function mainController(Post, PostType, User) {
 
     var vm = this;
     vm.postService = Post;
     vm.userService = User;
+    vm.postTypeService = PostType;
 
     vm.post = {
       id: null,
@@ -27,6 +29,10 @@
       vm.postService.getAll()
         .then(function (data) {
           vm.posts = data;
+        });
+      vm.postTypeService.getAll()
+        .then(function (data) {
+          vm.types = data;
         });
     };
 

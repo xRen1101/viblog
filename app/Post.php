@@ -13,4 +13,9 @@ class Post extends BaseModel
     public function images() {
         return $this->hasMany('App\Image');
     }
+
+    public function type()
+    {
+        return $this->belongsTo('App\PostType', 'type_id');
+    }
 }

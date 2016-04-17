@@ -14,10 +14,10 @@ class PostsController extends Controller
     public function posts($id = null)
     {
     	if ($id == null) {
-    		$data = Post::orderBy('created_at', 'asc')->with('images')->get();
+    		$data = Post::orderBy('created_at', 'asc')->with('images')->with('type')->get();
     	} 
     	else {
-    		$data = Post::with('images')->find($id, array('id', 'title', 'text'));
+    		$data = Post::with('images')->with('type')->find($id, array('id', 'title', 'text'));
     	}
 
     	return $data;
