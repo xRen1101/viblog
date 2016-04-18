@@ -87,3 +87,25 @@
   font-size: 10px;
   float: left;
 }
+
+.menu-row {
+  height: 70px;
+  background-color: #ffffff;
+}
+
+.menu-element {
+  font-size: 1.3em;
+  font-weight: 300;
+  padding: 20px 30px 20px 30px;
+}
+
+.affixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+.affixed + .container {
+  padding-top: 70px;
+}

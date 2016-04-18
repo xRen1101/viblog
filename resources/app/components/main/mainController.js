@@ -62,8 +62,8 @@
       }
     };
 
-    vm.setPostVisibility = function (post, inview) {
-      post.visible = inview;
+    vm.setPostVisibility = function (post) {
+      post.visible = true;
     };
 
     vm.load();
