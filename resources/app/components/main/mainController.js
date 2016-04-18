@@ -22,6 +22,7 @@
       text: '',
       embed_url: '',
       images: [],
+      type: { id: 1 },
       visible: false
     };
 

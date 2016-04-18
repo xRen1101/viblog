@@ -27,6 +27,9 @@
             <div class="row margin-top-sm margin-bottom-sm">
                 <div class="col-xs-offset-2 col-xs-8" ng-if="main.userService.logged">
                     <div class="form-group">
+                        <select ng-model="main.post.type" ng-options="type.type for type in main.types track by type.id"></select>
+                    </div>
+                    <div class="form-group">
                         <input type="text" class="form-control" ng-model="main.post.title" placeholder="Antraštytė">
                     </div>
                     <div class="form-group">
@@ -72,12 +75,15 @@
                                 <i class="glyphicon glyphicon-remove"></i>
                             </button>
                             <div class="title"><strong>{{ post.title }}</strong></div>
-                            <div>{{ post.text }}</div>
+                            <div class="margin-bottom-xs margin-top-xs">{{ post.text }}</div>
                             <a href="{{ image.link }}" ng-repeat="image in post.images">
                                 <image class="post-image img-rounded" ng-class="{'post-image-big': post.images.length % 2 == 1 && image == post.images[0]}" src="{{ image.link }}"></image>
                             </a>
                             <ng-youtube-embed url="post.embed_url" width="100%" ng-if="post.embed_url"></ng-youtube-embed>
-                            <div class="post-date">{{ post.created_at | date : 'yyyy-MM-dd' : '+0300' }}</div>
+                            <div clsss="row">
+                                <div class="post-type">{{ post.type.type }}</div>
+                                <div class="post-date">{{ post.created_at | date : 'yyyy-MM-dd' : '+0300' }}</div>
+                            </div>
                         </div>
                     </div>
                 </div>

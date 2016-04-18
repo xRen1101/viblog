@@ -17,6 +17,22 @@ body {
   float: right;
 }
 
+.margin-top-xs {
+  margin-top: 5px;
+}
+
+.margin-bottom-xs {
+  margin-bottom: 5px;
+}
+
+.margin-left-xs {
+  margin-left: 5px;
+}
+
+.margin-right-xs {
+  margin-right: 5px;
+}
+
 .margin-top-sm {
   margin-top: 20px;
 }
@@ -57,5 +73,6 @@ body {
 
 iframe {
   border-radius: 7px;
-  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

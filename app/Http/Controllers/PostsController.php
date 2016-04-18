@@ -30,6 +30,8 @@ class PostsController extends Controller
         $post->title = $request->input('title');
         $post->text = $request->input('text');
         $post->embed_url = $request->input('embed_url');
+        $post->type_id = $request->input('type')['id'];
+
         $post->save();
 
         foreach($request->input('images') as $rImage) {
