@@ -26,6 +26,8 @@
       visible: false
     };
 
+    vm.postFilter = '';
+
     vm.load = function () {
       vm.postService.getAll()
         .then(function (data) {
@@ -64,6 +66,10 @@
 
     vm.setPostVisibility = function (post) {
       post.visible = true;
+    };
+
+    vm.filterPosts = function (typeId) {
+      vm.postFilter = typeId;
     };
 
     vm.load();

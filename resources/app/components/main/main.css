@@ -90,22 +90,38 @@
 
 .menu-row {
   height: 70px;
-  background-color: #ffffff;
+  background-color: rgba(188, 218, 216, 0.9);
+  margin-bottom: 0px;
+  z-index: 1;
 }
 
 .menu-element {
   font-size: 1.3em;
   font-weight: 300;
   padding: 20px 30px 20px 30px;
+  background-color: rgba(188, 218, 216, 0.9);
+}
+
+.navbar-nav li div:hover,
+.navbar li div.active {
+  background-color: rgb(179, 208, 206);
+  transition: 0.7s all linear;
+  cursor: pointer;
+  height: 100%;
 }
 
 .affixed {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1;
 }
 
 .affixed + .container {
   padding-top: 70px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-element {
+    background-color: rgba(188, 218, 216, 0);
+  }
 }
