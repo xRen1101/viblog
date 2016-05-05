@@ -8,14 +8,16 @@
   mainController.$inject = [
     'PostService',
     'PostTypeService',
-    'UserService'];
+    'UserService',
+    'ImageService'];
 
-  function mainController(Post, PostType, User) {
+  function mainController(Post, PostType, User, Image) {
 
     var vm = this;
     vm.postService = Post;
     vm.userService = User;
     vm.postTypeService = PostType;
+    vm.imageService = Image;
 
     vm.post = {
       id: null,
@@ -61,7 +63,19 @@
           post_id: null,
           link: vm.link
         });
+        vm.link = '';
       }
+    };
+
+    vm.uploadImage = function (image) {
+        vm.imageService.upload(image)
+            .then(function (response) {
+                vm.post.images.push({
+                    id: null,
+                    post_id: null,
+                    link: response.link
+                });
+            });
     };
 
     vm.setPostVisibility = function (post) {

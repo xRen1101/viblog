@@ -40,7 +40,7 @@
 }
 
 .add-button {
-  width: 100%;
+  float: right;
 }
 
 .intro-anchor-scroll-row {
@@ -124,4 +124,8 @@
   .menu-element {
     background-color: rgba(188, 218, 216, 0);
   }
+}
+
+.upload-button {
+  float: right;
 }

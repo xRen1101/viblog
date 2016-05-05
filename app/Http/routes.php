@@ -23,6 +23,9 @@ Route::delete('api/v1/posts/{id}', 'PostsController@delete')->middleware('auth')
 
 Route::get('api/v1/types/{id?}', 'PostTypesController@types');
 
+Route::get('api/v1/images/upload', 'ImagesController@upload');
+Route::post('api/v1/images/upload', 'ImagesController@postUpload');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes

@@ -22,7 +22,8 @@
     "ng-youtube-embed": "^0.2.3",
     "angular-scroll": "^1.0.0",
     "angular-inview": "^1.5.7",
-    "ngScrollSpy": "^1.0.10"
+    "ngScrollSpy": "^1.0.10",
+    "ng-flow": "~2"
   },
   "install": {
     "path": {

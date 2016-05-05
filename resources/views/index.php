@@ -21,6 +21,8 @@
     <script src="resources/assets/libs/angular-scroll/angular-scroll.js"></script>
     <script src="resources/assets/libs/angular-inview/angular-inview.js"></script>
     <script src="resources/assets/libs/ngScrollSpy/ngScrollSpy.js"></script>
+    <script src="resources/assets/libs/flow.js/flow.js"></script>
+    <script src="resources/assets/libs/ng-flow/ng-flow.js"></script>
 
     <script src="resources/app/app.js"></script>
     <script src="resources/app/components/main/main.js"></script>
@@ -32,5 +34,6 @@
     <script src="resources/app/components/shared/reverseFilter.js"></script>
     <script src="resources/app/components/shared/userService.js"></script>
     <script src="resources/app/components/shared/pathProvider.js"></script>
+    <script src="resources/app/components/shared/imageService.js"></script>
 </body>
 </html>
