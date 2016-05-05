@@ -14,5 +14,5 @@ angular.module('viblogApp').config(function($httpProvider, $routeProvider, $loca
 
 	$locationProvider.html5Mode(true);
 
-	pathProvider.setBaseUrl('http://localhost/viblog/api/v1/');
+	pathProvider.setBaseUrl('http://vitare.lt/api/v1/');
 });

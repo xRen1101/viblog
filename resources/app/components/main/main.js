@@ -20,7 +20,7 @@ angular.module('viblogApp.main').config([
   });
 
   flowFactoryProvider.defaults = {
-    target: 'http://localhost/viblog/api/v1/images/upload'
+    target: 'http://vitare.lt/api/v1/images/upload'
   };
   
 }]);

@@ -27,6 +27,6 @@ class ImagesController extends Controller
 
         $img->save('storage/app/public/' . $filename);
 
-        return response()->json(['link' => 'http://localhost/viblog/storage/app/public/' . $filename]);
+        return response()->json(['link' => 'http://vitare.lt/storage/app/public/' . $filename]);
     }
 }
