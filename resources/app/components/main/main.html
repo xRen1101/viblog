@@ -107,8 +107,8 @@
                             <button class="btn btn-xs btn-default float-right" ng-click="main.delete(post.id)" ng-if="main.userService.logged">
                                 <i class="glyphicon glyphicon-remove"></i>
                             </button>
-                            <div class="title"><strong>{{ post.title }}</strong></div>
-                            <div class="margin-bottom-xs margin-top-xs">{{ post.text }}</div>
+                            <div class="post-title"><strong>{{ post.title }}</strong></div>
+                            <div class="margin-bottom-xs margin-top-xs post-text">{{ post.text }}</div>
                             <a href="{{ image.link }}" ng-repeat="image in post.images">
                                 <image class="post-image img-rounded" ng-class="{'post-image-big': post.images.length % 2 == 1 && image == post.images[0]}" src="{{ image.link }}"></image>
                             </a>
