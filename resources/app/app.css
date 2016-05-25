@@ -3,9 +3,20 @@ body {
 }
 
 .intro-container {
-  background: url("../assets/images/intro.jpg") fixed;
   background-size: cover;
   height: 100vh;
+}
+
+.intro-container .video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transition: 1s opacity;
 }
 
 .news-container {
