@@ -2,6 +2,10 @@
   margin-top: 20px;
 }
 
+.nav-container {
+  width: 815px;
+}
+
 .timeline::before {
   content: '';
   position: absolute;
@@ -28,8 +32,9 @@
   margin: 1%;
 }
 
-.title {
-  font-size: 16px;
+.post-title {
+  font-size: 19px;
+  text-align: center;
 }
 
 .upload-hint {
@@ -128,4 +133,8 @@
 
 .upload-button {
   float: right;
+}
+
+.post-text {
+  text-align: justify;
 }
