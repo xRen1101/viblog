@@ -2,6 +2,10 @@
   margin-top: 20px;
 }
 
+.nav-container {
+  width: 815px;
+}
+
 .timeline::before {
   content: '';
   position: absolute;
