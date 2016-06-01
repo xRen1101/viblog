@@ -2,8 +2,10 @@
   margin-top: 20px;
 }
 
-.nav-container {
-  width: 815px;
+@media (min-width: 768px) {
+  .nav-container {
+    width: 815px;
+  }
 }
 
 .timeline::before {
