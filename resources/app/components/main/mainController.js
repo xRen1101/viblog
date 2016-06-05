@@ -19,7 +19,7 @@
     vm.postTypeService = PostType;
     vm.imageService = Image;
 
-    vm.post = {
+    var postDefaults = {
       id: null,
       text: '',
       embed_url: '',
@@ -31,6 +31,7 @@
     vm.postFilter = '';
 
     vm.load = function () {
+      vm.post = angular.copy(postDefaults);
       vm.postService.getAll()
         .then(function (data) {
           vm.posts = data;
