@@ -139,4 +139,5 @@
 
 .post-text {
   text-align: justify;
+  white-space: pre-line;
 }
