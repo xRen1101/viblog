@@ -93,6 +93,10 @@
       }
     };
 
+    vm.addBulletSymbol = function () {
+      vm.post.text = vm.post.text + '• ';
+    };
+
     vm.setPostVisibility = function (post) {
       post.visible = true;
     };
