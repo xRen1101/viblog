@@ -31,7 +31,7 @@
                 <li>
                     <div class="menu-element" ng-click="main.filterPosts('')" ng-class="{'active': main.postFilter == ''}">All</div>
                 </li>
-                <li ng-repeat="type in main.types">
+                <li ng-repeat="type in main.types | notEmptyTypes : main.posts">
                     <div class="menu-element" ng-click="main.filterPosts(type.id)" ng-class="{'active': main.postFilter == type.id}">{{ type.type }}</div>
                 </li>
             </ul>
