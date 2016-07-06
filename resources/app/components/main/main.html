@@ -31,7 +31,7 @@
                 <li>
                     <div class="menu-element" ng-click="main.filterPosts('')" ng-class="{'active': main.postFilter == ''}">All</div>
                 </li>
-                <li ng-repeat="type in main.types">
+                <li ng-repeat="type in main.types | notEmptyTypes : main.posts">
                     <div class="menu-element" ng-click="main.filterPosts(type.id)" ng-class="{'active': main.postFilter == type.id}">{{ type.type }}</div>
                 </li>
             </ul>
@@ -106,6 +106,9 @@
                         <div class="panel-body">
                             <button class="btn btn-xs btn-default float-right" ng-click="main.delete(post.id)" ng-if="main.userService.logged">
                                 <i class="glyphicon glyphicon-remove"></i>
+                            </button>
+                            <button class="btn btn-xs btn-default float-right" ng-click="main.edit(post.id)" ng-if="main.userService.logged">
+                                <i class="glyphicon glyphicon-edit"></i>
                             </button>
                             <div class="post-title"><strong>{{ post.title }}</strong></div>
                             <div class="margin-bottom-xs margin-top-xs post-text">{{ post.text }}</div>

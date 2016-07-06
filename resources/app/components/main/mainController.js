@@ -57,6 +57,13 @@
         });
     };
 
+    vm.edit = function (postId) {
+      vm.postService.get(postId)
+        .then(function (data) {
+          vm.post = data;
+        });
+    };
+
     vm.addImage = function () {
       if (vm.link) {
         vm.post.images.push({
