@@ -94,7 +94,7 @@
     };
 
     vm.addBulletSymbol = function () {
-      vm.post.text = vm.post.text + '• ';
+      vm.post.text = vm.post.text + '\n• ';
     };
 
     vm.setPostVisibility = function (post) {
