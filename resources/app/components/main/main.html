@@ -78,9 +78,11 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-4" ng-repeat="image in main.post.images">
-                            <a href="{{ image.link }}">
-                                <image class="create-post-image img-rounded" src="{{ image.link }}"></image>
-                            </a>
+                            <img class="create-post-image img-rounded" src="{{ image.link }}">
+                                <button class="btn btn-xs btn-default remove-image-button" ng-click="main.removeImage(image)">
+                                    <i class="glyphicon glyphicon-remove"></i>
+                                </button>
+                            </img>
                         </div>
                     </div>
                     <div class="row">

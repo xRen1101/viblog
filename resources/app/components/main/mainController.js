@@ -86,6 +86,13 @@
             });
     };
 
+    vm.removeImage = function (image) {
+      var index = vm.post.images.indexOf(image);
+      if (index > -1) {
+        vm.post.images.splice(index, 1);
+      }
+    };
+
     vm.setPostVisibility = function (post) {
       post.visible = true;
     };
