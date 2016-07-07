@@ -16,7 +16,8 @@
 </div>
 
 <div class="container-fluid news-container">
-<nav id="menu" class="row menu-row navbar navbar-default" affix affix-class="affixed">
+<span id="menu"></span>
+<nav class="row menu-row navbar navbar-default" affix affix-class="affixed">
     <div class="container nav-container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -115,9 +116,11 @@
                             <button class="btn btn-xs btn-default float-right" ng-click="main.delete(post.id)" ng-if="main.userService.logged">
                                 <i class="glyphicon glyphicon-remove"></i>
                             </button>
-                            <button class="btn btn-xs btn-default float-right" ng-click="main.edit(post.id)" ng-if="main.userService.logged">
-                                <i class="glyphicon glyphicon-edit"></i>
-                            </button>
+                            <a href="#menu" offset="0" duration="1500" du-smooth-scroll>
+                                <button class="btn btn-xs btn-default float-right" ng-click="main.edit(post.id)" ng-if="main.userService.logged">
+                                    <i class="glyphicon glyphicon-edit"></i>
+                                </button>
+                            </a>
                             <div class="post-title"><strong>{{ post.title }}</strong></div>
                             <div class="margin-bottom-xs margin-top-xs post-text">{{ post.text }}</div>
                             <a href="{{ image.link }}" ng-repeat="image in post.images">
