@@ -17,7 +17,7 @@ class PostsController extends Controller
     		$data = Post::orderBy('created_at', 'asc')->with('images')->with('type')->get();
     	} 
     	else {
-    		$data = Post::with('images')->with('type')->find($id, array('id', 'title', 'text'));
+    		$data = Post::with('images')->with('type')->find($id);
     	}
 
     	return $data;
@@ -27,20 +27,28 @@ class PostsController extends Controller
     {
     	$post = new Post;
 
-        $post->title = $request->input('title');
-        $post->text = $request->input('text');
-        $post->embed_url = $request->input('embed_url');
-        $post->type_id = $request->input('type')['id'];
+        if ($request->input('id') != null) {
+            $requestData = $request->all();
+            $post = Post::with('images')->with('type')->find($requestData['id']);
+            $post->fill($requestData);
+            $post->type_id = $requestData['type']['id'];
+            $post->save();
+        } else {
+            $post->title = $request->input('title');
+            $post->text = $request->input('text');
+            $post->embed_url = $request->input('embed_url');
+            $post->type_id = $request->input('type')['id'];
 
-        $post->save();
+            $post->save();
 
-        foreach($request->input('images') as $rImage) {
-            $image = new Image;
+            foreach($request->input('images') as $rImage) {
+                $image = new Image;
 
-            $image->post_id = $post->id;
-            $image->link = $rImage['link'];
+                $image->post_id = $post->id;
+                $image->link = $rImage['link'];
 
-            $image->save();
+                $image->save();
+            }
         }
 
         return response()->json(['id' => $post->id]);
