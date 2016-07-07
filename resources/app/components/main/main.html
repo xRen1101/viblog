@@ -62,7 +62,7 @@
                     <div class="form-group">
                         <textarea type="text" class="form-control" ng-model="main.post.text" placeholder="Čia tekstuką gali parašyti :)"></textarea>
                     </div>
-                    <div class="row">
+                    <div class="row" ng-if="main.mode == 'create'">
                         <div class="form-group col-xs-8">
                             <input type="text" class="form-control" ng-model="main.link" placeholder="Noutraukytės link'as">
                         </div>
@@ -84,7 +84,7 @@
                     <div class="row">
                         <div class="col-xs-4" ng-repeat="image in main.post.images">
                             <img class="create-post-image img-rounded" src="{{ image.link }}">
-                                <button class="btn btn-xs btn-default remove-image-button" ng-click="main.removeImage(image)">
+                                <button class="btn btn-xs btn-default remove-image-button" ng-click="main.removeImage(image)" ng-if="main.mode == 'create'">
                                     <i class="glyphicon glyphicon-remove"></i>
                                 </button>
                             </img>
@@ -99,7 +99,8 @@
                             type="submit"
                             class="btn btn-primary margin-top-sm margin-bottom-sm col-xs-offset-4 col-xs-4 col-sm-offset-5 col-sm-2 col-md-offset-5 col-md-2"
                             ng-click="main.save()">
-                        <i class="glyphicon glyphicon-plus-sign"></i> <span class="hidden-xs hidden-sm">Post</span>
+                        <span ng-if="main.mode == 'create'"><i class="glyphicon glyphicon-plus-sign"></i> <span class="hidden-xs hidden-sm">Post</span></span>
+                        <span ng-if="main.mode == 'edit'"><i class="glyphicon glyphicon-ok-sign"></i> <span class="hidden-xs hidden-sm">Save</span></span>
                     </button>
                 </div>
             </div>

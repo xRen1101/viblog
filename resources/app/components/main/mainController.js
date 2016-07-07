@@ -29,6 +29,7 @@
     };
 
     vm.postFilter = '';
+    vm.mode = 'create';
 
     vm.load = function () {
       vm.post = angular.copy(postDefaults);
@@ -40,6 +41,7 @@
         .then(function (data) {
           vm.types = data;
         });
+      vm.mode = 'create';
     };
 
     vm.save = function () {
@@ -61,6 +63,7 @@
       vm.postService.get(postId)
         .then(function (data) {
           vm.post = data;
+          vm.mode = 'edit';
         });
     };
 
