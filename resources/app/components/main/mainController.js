@@ -29,6 +29,7 @@
     };
 
     vm.postFilter = '';
+    vm.mode = 'create';
 
     vm.load = function () {
       vm.post = angular.copy(postDefaults);
@@ -40,6 +41,7 @@
         .then(function (data) {
           vm.types = data;
         });
+      vm.mode = 'create';
     };
 
     vm.save = function () {
@@ -61,6 +63,7 @@
       vm.postService.get(postId)
         .then(function (data) {
           vm.post = data;
+          vm.mode = 'edit';
         });
     };
 
@@ -84,6 +87,17 @@
                     link: response.link
                 });
             });
+    };
+
+    vm.removeImage = function (image) {
+      var index = vm.post.images.indexOf(image);
+      if (index > -1) {
+        vm.post.images.splice(index, 1);
+      }
+    };
+
+    vm.addBulletSymbol = function () {
+      vm.post.text = vm.post.text + '\n• ';
     };
 
     vm.setPostVisibility = function (post) {

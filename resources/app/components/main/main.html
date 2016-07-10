@@ -16,7 +16,8 @@
 </div>
 
 <div class="container-fluid news-container">
-<nav id="menu" class="row menu-row navbar navbar-default" affix affix-class="affixed">
+<span id="menu"></span>
+<nav class="row menu-row navbar navbar-default" affix affix-class="affixed">
     <div class="container nav-container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -54,10 +55,15 @@
                     <div class="form-group">
                         <input type="text" class="form-control" ng-model="main.post.title" placeholder="Antraštytė">
                     </div>
+                    <div class="special-symbol-button">
+                        <button class="btn btn-xs btn-default" ng-click="main.addBulletSymbol()">
+                            <i class="glyphicon glyphicon-list"></i>
+                        </button>
+                    </div>
                     <div class="form-group">
                         <textarea type="text" class="form-control" ng-model="main.post.text" placeholder="Čia tekstuką gali parašyti :)"></textarea>
                     </div>
-                    <div class="row">
+                    <div class="row" ng-if="main.mode == 'create'">
                         <div class="form-group col-xs-8">
                             <input type="text" class="form-control" ng-model="main.link" placeholder="Noutraukytės link'as">
                         </div>
@@ -78,9 +84,11 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-4" ng-repeat="image in main.post.images">
-                            <a href="{{ image.link }}">
-                                <image class="create-post-image img-rounded" src="{{ image.link }}"></image>
-                            </a>
+                            <img class="create-post-image img-rounded" src="{{ image.link }}">
+                                <button class="btn btn-xs btn-default remove-image-button" ng-click="main.removeImage(image)" ng-if="main.mode == 'create'">
+                                    <i class="glyphicon glyphicon-remove"></i>
+                                </button>
+                            </img>
                         </div>
                     </div>
                     <div class="row">
@@ -92,7 +100,8 @@
                             type="submit"
                             class="btn btn-primary margin-top-sm margin-bottom-sm col-xs-offset-4 col-xs-4 col-sm-offset-5 col-sm-2 col-md-offset-5 col-md-2"
                             ng-click="main.save()">
-                        <i class="glyphicon glyphicon-plus-sign"></i> <span class="hidden-xs hidden-sm">Post</span>
+                        <span ng-if="main.mode == 'create'"><i class="glyphicon glyphicon-plus-sign"></i> <span class="hidden-xs hidden-sm">Post</span></span>
+                        <span ng-if="main.mode == 'edit'"><i class="glyphicon glyphicon-ok-sign"></i> <span class="hidden-xs hidden-sm">Save</span></span>
                     </button>
                 </div>
             </div>
@@ -107,9 +116,11 @@
                             <button class="btn btn-xs btn-default float-right" ng-click="main.delete(post.id)" ng-if="main.userService.logged">
                                 <i class="glyphicon glyphicon-remove"></i>
                             </button>
-                            <button class="btn btn-xs btn-default float-right" ng-click="main.edit(post.id)" ng-if="main.userService.logged">
-                                <i class="glyphicon glyphicon-edit"></i>
-                            </button>
+                            <a href="#menu" offset="0" duration="1500" du-smooth-scroll>
+                                <button class="btn btn-xs btn-default float-right" ng-click="main.edit(post.id)" ng-if="main.userService.logged">
+                                    <i class="glyphicon glyphicon-edit"></i>
+                                </button>
+                            </a>
                             <div class="post-title"><strong>{{ post.title }}</strong></div>
                             <div class="margin-bottom-xs margin-top-xs post-text">{{ post.text }}</div>
                             <a href="{{ image.link }}" ng-repeat="image in post.images">

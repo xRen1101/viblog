@@ -141,3 +141,13 @@
   text-align: justify;
   white-space: pre-line;
 }
+
+.remove-image-button {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+}
+
+.special-symbol-button {
+  margin-bottom: 5px;
+}
