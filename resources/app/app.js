@@ -3,12 +3,22 @@
 angular.module('viblogApp', [
 	'viblogApp.main',
 	'viblogApp.login',
-	'ngRoute']);
+	'ngRoute',
+	'ezfb']);
 
-angular.module('viblogApp').config(function($httpProvider, $routeProvider, $locationProvider, pathProvider) {
+angular.module('viblogApp').config(function(
+	$httpProvider,
+	$routeProvider,
+	$locationProvider,
+	pathProvider,
+	ezfbProvider) {
 
 	$httpProvider.defaults.useXDomain = true;
 	delete $httpProvider.defaults.headers.common["X-Requested-With"];
+
+	ezfbProvider.setInitParams({
+		appId: '150146418722710'
+	});
 
 	$routeProvider.otherwise({redirectTo: '/'});
 

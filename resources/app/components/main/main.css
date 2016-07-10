@@ -151,3 +151,8 @@
 .special-symbol-button {
   margin-bottom: 5px;
 }
+
+.fb-share-block {
+  height: 40px;
+  margin-left: 0;
+}
