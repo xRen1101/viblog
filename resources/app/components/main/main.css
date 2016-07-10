@@ -107,6 +107,7 @@
   font-weight: 300;
   padding: 20px 30px 20px 30px;
   background-color: rgba(188, 218, 216, 0.9);
+  color: #000000;
 }
 
 .navbar-nav li div:hover,
