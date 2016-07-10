@@ -23,6 +23,7 @@
     <script src="resources/assets/libs/ngScrollSpy/ngScrollSpy.js"></script>
     <script src="resources/assets/libs/flow.js/flow.js"></script>
     <script src="resources/assets/libs/ng-flow/ng-flow.js"></script>
+    <script src="resources\assets\libs\angular-easyfb\angular-easyfb.js"></script>
 
     <script src="resources/app/app.js"></script>
     <script src="resources/app/components/main/main.js"></script>
