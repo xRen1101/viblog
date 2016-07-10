@@ -24,5 +24,5 @@ angular.module('viblogApp').config(function(
 
 	$locationProvider.html5Mode(true);
 
-	pathProvider.setBaseUrl('http://localhost/viblog/api/v1/');
+	pathProvider.setBaseUrl('http://localhost:8001/api/v1/');
 });

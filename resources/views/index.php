@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="resources/assets/libs/bootstrap/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="resources/assets/libs/animate/animate.css" />
     <link rel="stylesheet" type="text/css" href="resources/app/app.css" />
-    <base href="/viblog/">
+    <base href="/">
 </head>
 <body>
     <div ng-view></div>
