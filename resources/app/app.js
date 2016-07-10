@@ -17,7 +17,7 @@ angular.module('viblogApp').config(function(
 	delete $httpProvider.defaults.headers.common["X-Requested-With"];
 
 	ezfbProvider.setInitParams({
-		appId: '150454298691922'
+		appId: '150146418722710'
 	});
 
 	$routeProvider.otherwise({redirectTo: '/'});
