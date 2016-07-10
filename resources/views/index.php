@@ -7,7 +7,7 @@
     <meta property="og:type" content="blog" />
     <meta property="og:title" content="Vitare blog" />
     <meta property="og:description" content="Whanna know more about me?" />
-    <meta property="og:image" content="https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/13321861_1113973098625431_5315874132826628711_n.jpg?oh=dc92c2dcf7eb3369be99389cf5e78a9f&oe=580C47A9" />
+    <meta property="og:image" content="http://vitare.lt/resources/assets/images/bg.jpg" />
     <title>viBlog</title>
     <link rel="stylesheet" type="text/css" href="resources/assets/libs/bootstrap/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="resources/assets/libs/animate/animate.css" />

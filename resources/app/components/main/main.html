@@ -28,14 +28,16 @@
             </button>
         </div>
         <div class="collapse navbar-collapse" id="navbar">
-            <ul class="nav navbar-nav">
-                <li>
-                    <div class="menu-element" ng-click="main.filterPosts('')" ng-class="{'active': main.postFilter == ''}">All</div>
-                </li>
-                <li ng-repeat="type in main.types | notEmptyTypes : main.posts">
-                    <div class="menu-element" ng-click="main.filterPosts(type.id)" ng-class="{'active': main.postFilter == type.id}">{{ type.type }}</div>
-                </li>
-            </ul>
+            <a href="#menu" offset="0" duration="1500" du-smooth-scroll>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <div class="menu-element" ng-click="main.filterPosts('')" ng-class="{'active': main.postFilter == ''}">All</div>
+                    </li>
+                    <li ng-repeat="type in main.types | notEmptyTypes : main.posts">
+                        <div class="menu-element" ng-click="main.filterPosts(type.id)" ng-class="{'active': main.postFilter == type.id}">{{ type.type }}</div>
+                    </li>
+                </ul>
+            </a>
         </div>
     </div>
 </nav>
