@@ -20,11 +20,14 @@
             User.logged = true;
             User.username = username;
             User.password = password;
+            User.superadmin = username == 'superadmin';
+
             $location.url('/');
           } else {
             User.logged = false;
             User.username = '';
             User.password = '';
+            User.superadmin = false;
           }
         });
     };

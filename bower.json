@@ -23,7 +23,8 @@
     "angular-scroll": "^1.0.0",
     "angular-inview": "^1.5.7",
     "ngScrollSpy": "^1.0.10",
-    "ng-flow": "~2"
+    "ng-flow": "~2",
+    "angular-easyfb": "^1.5.1"
   },
   "install": {
     "path": {

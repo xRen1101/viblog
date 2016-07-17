@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta property="og:url" content="http://vitare.lt" />
+    <meta property="og:type" content="blog" />
+    <meta property="og:title" content="Vitare blog" />
+    <meta property="og:description" content="Whanna know more about me?" />
+    <meta property="og:image" content="http://vitare.lt/resources/assets/images/bg.jpg" />
     <title>viBlog</title>
     <link rel="stylesheet" type="text/css" href="resources/assets/libs/bootstrap/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="resources/assets/libs/animate/animate.css" />
     <link rel="stylesheet" type="text/css" href="resources/app/app.css" />
-    <base href="/viblog/">
+    <base href="/">
 </head>
 <body>
     <div ng-view></div>
@@ -23,6 +28,7 @@
     <script src="resources/assets/libs/ngScrollSpy/ngScrollSpy.js"></script>
     <script src="resources/assets/libs/flow.js/flow.js"></script>
     <script src="resources/assets/libs/ng-flow/ng-flow.js"></script>
+    <script src="resources\assets\libs\angular-easyfb\angular-easyfb.js"></script>
 
     <script src="resources/app/app.js"></script>
     <script src="resources/app/components/main/main.js"></script>

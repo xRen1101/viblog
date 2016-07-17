@@ -31,14 +31,16 @@
             </button>
         </div>
         <div class="collapse navbar-collapse" id="navbar">
-            <ul class="nav navbar-nav">
-                <li>
-                    <div class="menu-element" ng-click="main.filterPosts('')" ng-class="{'active': main.postFilter == ''}">All</div>
-                </li>
-                <li ng-repeat="type in main.types | notEmptyTypes : main.posts">
-                    <div class="menu-element" ng-click="main.filterPosts(type.id)" ng-class="{'active': main.postFilter == type.id}">{{ type.type }}</div>
-                </li>
-            </ul>
+            <a href="#menu" offset="0" duration="1500" du-smooth-scroll>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <div class="menu-element" ng-click="main.filterPosts('')" ng-class="{'active': main.postFilter == ''}">All</div>
+                    </li>
+                    <li ng-repeat="type in main.types | notEmptyTypes : main.posts">
+                        <div class="menu-element" ng-click="main.filterPosts(type.id)" ng-class="{'active': main.postFilter == type.id}">{{ type.type }}</div>
+                    </li>
+                </ul>
+            </a>
         </div>
     </div>
 </nav>
@@ -130,6 +132,14 @@
                                 <image class="post-image img-rounded" ng-class="{'post-image-big': post.images.length % 2 == 1 && image == post.images[0]}" src="{{ image.link }}"></image>
                             </a>
                             <ng-youtube-embed url="post.embed_url" width="100%" ng-if="post.embed_url"></ng-youtube-embed>
+                            <div class="row fb-share-block" ng-if="main.userService.superadmin">
+                                <div
+                                        class="fb-like"
+                                        data-share="true"
+                                        data-width="450"
+                                        data-show-faces="true">
+                                </div>
+                            </div>
                             <div clsss="row">
                                 <div class="post-type">{{ post.type.type }}</div>
                                 <div class="post-date">{{ post.created_at | date : 'yyyy-MM-dd' : '+0300' }}</div>
