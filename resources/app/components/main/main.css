@@ -3,8 +3,6 @@
 }
 
 .intro-container {
-  background: url("../../../assets/images/intro.jpg") fixed;
-  background-size: cover;
   height: 100vh;
 }
 
