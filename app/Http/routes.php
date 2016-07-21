@@ -17,6 +17,7 @@ header('Access-Control-Allow-Headers:  Content-Type, X-Auth-Token, Origin, Autho
 
 Route::get('/', function () { return view('index'); });
 Route::get('login', function () { return view('index'); });
+Route::get('posts/{id?}', function () { return view('index'); });
 
 Route::get('api/v1/users/{id?}', 'AuthenticationController@users');
 Route::post('api/v1/users', 'AuthenticationController@login');

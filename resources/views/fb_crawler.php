@@ -9,7 +9,7 @@
 
     if (strpos($requestUri, 'posts') == false) {
 
-        $postsRequestUrl = "http://${httpHost}/api/v1/posts/28";
+        $postsRequestUrl = "http://${httpHost}/api/v1${requestUri}";
 
         $json = file_get_contents($postsRequestUrl);
         $data = json_decode($json);
