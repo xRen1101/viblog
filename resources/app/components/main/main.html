@@ -129,12 +129,12 @@
                                 <image class="post-image img-rounded" ng-class="{'post-image-big': post.images.length % 2 == 1 && image == post.images[0]}" src="{{ image.link }}"></image>
                             </a>
                             <ng-youtube-embed url="post.embed_url" width="100%" ng-if="post.embed_url"></ng-youtube-embed>
-                            <div class="row fb-share-block" ng-if="main.userService.superadmin">
+                            <div class="row fb-share-block">
                                 <div
                                         class="fb-like"
                                         data-share="true"
                                         data-width="450"
-                                        data-show-faces="true"
+                                        data-show-faces="false"
                                         data-href="http://vitare.lt/posts/{{ post.id }}">
                                 </div>
                             </div>

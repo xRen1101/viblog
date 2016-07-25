@@ -8,7 +8,6 @@ angular.module('viblogApp').factory('UserService', [
 	userService.logged = false;
 	userService.username = '';
 	userService.password = '';
-	userService.superadmin = false;
 
 	userService.login = function(username, password) {
     var deferred = $q.defer();

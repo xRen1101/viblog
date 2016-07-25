@@ -1,29 +1,28 @@
 <?php
-    $requestUri = $_SERVER['REQUEST_URI'];
-    $httpHost = $_SERVER['HTTP_HOST'];
+$requestUri = $_SERVER['REQUEST_URI'];
+$httpHost = $_SERVER['HTTP_HOST'];
 
-    $title = "viBLOG";
-    $url = "http://${httpHost}";
-    $image = "http://${httpHost}/resources/assets/images/bg.jpg";
-    $description = "Labas. Aš Vitarė. O čia mano blogas.";
+$title = "ViBlog";
+$url = "http://${httpHost}";
+$image = "http://${httpHost}/resources/assets/images/bg.jpg";
+$description = "Labas. Aš Vitarė. O čia mano blogas.";
 
-    if (strpos($requestUri, 'posts') == false) {
+if (strpos($requestUri, 'posts') !== false) {
 
-        $postsRequestUrl = "http://${httpHost}/api/v1${requestUri}";
+    $postsRequestUrl = "http://${httpHost}/api/v1${requestUri}";
 
-        $json = file_get_contents($postsRequestUrl);
-        $data = json_decode($json);
+    $json = file_get_contents($postsRequestUrl);
+    $data = json_decode($json);
 
-        if (isset($data)) {
-            $title = $data->title;
-            if(count($data->images) > 0) {
-                $image = $data->images[0]->link;
-            }
-            $description = $data->text;
-            $url = "http://${httpHost}";
+    if (isset($data)) {
+        $title = $data->title;
+        if(count($data->images) > 0) {
+            $image = $data->images[0]->link;
         }
-        
+        $description = $data->text;
+        $url = "http://${httpHost}${requestUri}";
     }
+}
 ?>
 <!DOCTYPE html>
 <html>
