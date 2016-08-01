@@ -6,16 +6,28 @@
   height: 100vh;
 }
 
+.video-overlay {
+  background: url("../../../assets/images/black-squares.png") repeat;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+}
+
 .intro-container .video-background {
-  position: fixed;
+  position: absolute;
   right: 0;
   bottom: 0;
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
   width: auto;
   height: auto;
   z-index: -100;
   transition: 1s opacity;
+  background-size: 100% 100%;
 }
 
 .news-container {
