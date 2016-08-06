@@ -31,6 +31,8 @@
     vm.postFilter = '';
     vm.mode = 'create';
 
+    vm.currentTime = new Date();
+
     vm.load = function () {
       vm.post = angular.copy(postDefaults);
       vm.postService.getAll()
