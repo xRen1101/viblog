@@ -30,10 +30,12 @@
 
     vm.postFilter = '';
     vm.mode = 'create';
+    vm.error = null;
 
     vm.currentTime = new Date();
 
     vm.load = function () {
+      vm.error = null;
       vm.post = angular.copy(postDefaults);
       vm.postService.getAll()
         .then(function (data) {
@@ -49,8 +51,12 @@
     vm.save = function () {
       vm.postService.save(vm.post)
         .then(function (data) {
-          vm.postId = data.id;
-          vm.load();
+          if (data.error) {
+            vm.error = data.error;
+          } else {
+            vm.postId = data.id;
+            vm.load();
+          }
         });
     };
 

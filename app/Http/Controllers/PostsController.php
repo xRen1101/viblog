@@ -39,15 +39,21 @@ class PostsController extends Controller
             $post->embed_url = $request->input('embed_url');
             $post->type_id = $request->input('type')['id'];
 
-            $post->save();
 
-            foreach($request->input('images') as $rImage) {
-                $image = new Image;
 
-                $image->post_id = $post->id;
-                $image->link = $rImage['link'];
+            try {
+                $post->save();
+                foreach ($request->input('images') as $rImage) {
+                    $image = new Image;
 
-                $image->save();
+                    $image->post_id = $post->id;
+                    $image->link = $rImage['link'];
+
+                    $image->save();
+                }
+            }
+            catch (\Exception $e) {
+                return response()->json(['error' => 'Kažką pamiršai užpildyti !', 'errorCode' => '500']);
             }
         }
 
