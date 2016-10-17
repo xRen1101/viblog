@@ -66,6 +66,7 @@
 }
 
 .post-image {
+  cursor: pointer;
   width: 47%;
   margin: 1%;
 }

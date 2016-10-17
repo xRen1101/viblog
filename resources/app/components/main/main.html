@@ -153,7 +153,7 @@
                             </a>
                             <div class="post-title"><strong>{{ post.title }}</strong></div>
                             <div class="margin-bottom-xs margin-top-xs post-text">{{ post.text }}</div>
-                            <a href="{{ image.link }}" ng-repeat="image in post.images">
+                            <a ng-repeat="image in post.images" ng-click="main.openImagesModal($index, post)">
                                 <image class="post-image img-rounded" ng-class="{'post-image-big': post.images.length % 2 == 1 && image == post.images[0]}" src="{{ image.link }}"></image>
                             </a>
                             <ng-youtube-embed url="post.embed_url" width="100%" ng-if="post.embed_url"></ng-youtube-embed>

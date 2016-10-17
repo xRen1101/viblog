@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <title>viBlog</title>
-    <link rel="stylesheet" type="text/css" href="/resources/assets/libs/bootstrap/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="/resources/assets/libs/animate/animate.css" />
-    <link rel="stylesheet" type="text/css" href="/resources/app/app.css" />
+    <link rel="stylesheet" href="/resources/assets/libs/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="/resources/assets/libs/animate/animate.css" />
+    <link rel="stylesheet" href="/resources/assets/libs/angular-bootstrap-lightbox/angular-bootstrap-lightbox.css">
+    <link rel="stylesheet" href="/resources/app/app.css" />
     <base href="/">
 </head>
 <body>
@@ -25,6 +26,8 @@
     <script src="/resources/assets/libs/flow.js/flow.js"></script>
     <script src="/resources/assets/libs/ng-flow/ng-flow.js"></script>
     <script src="/resources/assets/libs/angular-easyfb/angular-easyfb.js"></script>
+    <script src="/resources/assets/libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="/resources/assets/libs/angular-bootstrap-lightbox/angular-bootstrap-lightbox.js"></script>
 
     <script src="/resources/app/app.js"></script>
     <script src="/resources/app/components/main/main.js"></script>

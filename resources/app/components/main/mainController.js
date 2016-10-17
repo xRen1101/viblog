@@ -9,9 +9,10 @@
     'PostService',
     'PostTypeService',
     'UserService',
-    'ImageService'];
+    'ImageService',
+    'Lightbox'];
 
-  function mainController(Post, PostType, User, Image) {
+  function mainController(Post, PostType, User, Image, Lightbox) {
 
     var vm = this;
     vm.postService = Post;
@@ -114,6 +115,10 @@
 
     vm.filterPosts = function (typeId) {
       vm.postFilter = typeId;
+    };
+
+    vm.openImagesModal = function (index, post) {
+      Lightbox.openModal(post.images, index);
     };
 
     vm.load();
