@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
-    <title>viBlog</title>
+    <title>VeeBlog</title>
     <link rel="stylesheet" href="/resources/assets/libs/bootstrap/bootstrap.css" />
     <link rel="stylesheet" href="/resources/assets/libs/animate/animate.css" />
     <link rel="stylesheet" href="/resources/assets/libs/angular-bootstrap-lightbox/angular-bootstrap-lightbox.css">
