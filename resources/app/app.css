@@ -1,5 +1,15 @@
-body {
+@font-face {
+  font-family: 'ChalkMars';
+  src:  url("../assets/fonts/chalkmars.otf") format("opentype");
+}
 
+@font-face {
+  font-family: 'Kindergarten';
+  src:  url("../assets/fonts/kindergarten.ttf");
+}
+
+body {
+  font-family: 'ChalkMars';
 }
 
 .float-right {
